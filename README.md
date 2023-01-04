@@ -2,6 +2,12 @@
 
 Recipe Station is a WebPage library for finding the recipe for whatever dish you desire to cook.
 
+# Github URL
+https://github.com/vivianho03/Phase-1-Project
+
+# Live View 
+https://codepen.io/chobin/pen/yLqYaYv
+
 ## Learning Goals
 - Design and architect features across a frontend
 - Communicate and collaborate in a technical environment

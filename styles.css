@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 :root{
-    --tenne-tawny: #d65108;
-    --tenne-tawny-dark: #b54507;
+    --tenne: blue;
+    --tenne-dark: #blue;
 }
 body{
     font-weight: 300;
@@ -62,19 +62,19 @@ body{
     font-size: 1.1rem;
     font-family: inherit;
     outline: 0;
-    border: 1px solid var(--tenne-tawny);
-    color: var(--tenne-tawny);
+    border: 1px solid var(--tenne);
+    color: var(--tenne);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
 .search-control::placeholder{
-    color: var(--tenne-tawny);
+    color: var(--tenne);
 }
 .search-btn{
     width: 55px;
     height: 55px;
     font-size: 1.8rem;
-    background: var(--tenne-tawny);
+    background: var(--tenne);
     color: #fff;
     border: none;
     border-top-right-radius: 2rem;
@@ -86,7 +86,7 @@ body{
     -o-transition: all 0.4s linear;
 }
 .search-btn:hover{
-    background: var(--tenne-tawny-dark);
+    background: var(--tenne-dark);
 }
 .meal-result{
     margin-top: 4rem;
@@ -117,7 +117,7 @@ body{
 .recipe-btn{
     text-decoration: none;
     color: #fff;
-    background: var(--tenne-tawny);
+    background: var(--tenne);
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0.75rem 0;
@@ -136,7 +136,7 @@ body{
     -o-transition: all 0.4s linear;
 }
 .recipe-btn:hover{
-    background: var(--tenne-tawny-dark);
+    background: var(--tenne-dark);
 }
 
 /* meal details */
@@ -150,7 +150,7 @@ body{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     color: #fff;
-    background: var(--tenne-tawny);
+    background: var(--tenne);
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
