@@ -6,12 +6,16 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-//get evenetListener to mouse Over to display modal
-meal.addEventListener('mouseover', mealRecipeModal);
-//get eventListener to mouse leave
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
+//get eventListener to mouse Over to display modal
+mealList.addEventListener("mouseover", (event) => {
+    // highlight the mouseover target
+    event.target.style.color = "orange";
+  
+    // reset the color after a short delay
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  }, false);
 
 //Add a function to your code base that makes a search in the mealDB api for tomato.
 function basicSearch() {
