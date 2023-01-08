@@ -6,9 +6,39 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
+//get evenetListener to mouse Over to display modal
+//get eventListener to mouse leave
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
+
+//Add a function to your code base that makes a search in the mealDB api for tomato.
+function basicSearch() {
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=tomato`)
+    .then(response => response.json())
+    .then(data => {
+        let basicDiv = document.getElementById("basic-search");
+        let basicHeader = document.createElement("h2");
+        basicHeader.innerHTML = "Current Search: Tomato"
+        basicDiv.append(basicHeader);
+        
+    })
+}
+//create function basicSearch
+//fetch API that grabs Tomato
+//then write the two .then 
+
+//Process the results and put them on the page.
+
+//Add a div with h2 that says current search tomato.
+
+//create variable for div with id="basic-search" 
+//create a variable for h2 and createElemeent
+//have this variable have a innerHTML "current search: tomato"
+//append h2 to div with id="basic-search"
+
+//When a new search is sent out we will change the word after current search to reflect the new search and the page works as before.
+
 
 
 // get meal list that matches with the ingredients
@@ -20,6 +50,7 @@ function getMealList(){
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
+                
                 html += `
                     <div class = "meal-item" data-id = "${meal.idMeal}">
                         <div class = "meal-img">
@@ -41,6 +72,7 @@ function getMealList(){
         mealList.innerHTML = html;
     });
 }
+
 
 
 // get recipe of the meal
