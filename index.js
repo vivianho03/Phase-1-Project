@@ -7,6 +7,7 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
 //get evenetListener to mouse Over to display modal
+meal.addEventListener('mouseover', mealRecipeModal);
 //get eventListener to mouse leave
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
@@ -14,6 +15,7 @@ recipeCloseBtn.addEventListener('click', () => {
 
 //Add a function to your code base that makes a search in the mealDB api for tomato.
 function basicSearch() {
+    
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=tomato`)
     .then(response => response.json())
     .then(data => {
