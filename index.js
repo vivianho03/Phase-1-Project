@@ -10,12 +10,11 @@ mealList.addEventListener('click', getMealRecipe);
 mealList.addEventListener("mouseover", (event) => {
     // highlight the mouseover target
     event.target.style.color = "white";
-  
-    // reset the color after a short delay
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  }, false);
+})
+mealList.addEventListener("mouseout", (event) => {
+    //remove the coloring 
+    event.target.style.color = "";
+})
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
