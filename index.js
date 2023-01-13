@@ -23,40 +23,13 @@ recipeCloseBtn.addEventListener('click', () => {
 // Add a function to your code base that makes a search in the mealDB api for tomato.
 function basicSearch() {
     let searchInputTxt = document.getElementById('search-input').value = "tomato";
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
-    .then(response => response.json())
-    .then(data => {
-    let html = "";
-        if(data.meals){
-            data.meals.forEach(meal => {
-                
-                html += `
-                    <div class = "meal-item" data-id = "${meal.idMeal}">
-                        <div class = "meal-img">
-                            <img src = "${meal.strMealThumb}" alt = "food">
-                        </div>
-                        <div class = "meal-name">
-                            <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
-                        </div>
-                    </div>
-                `;
-            });
-            mealList.classList.remove('notFound');
-        } else{
-            html = "Sorry, we didn't find any meal!";
-            mealList.classList.add('notFound');
-        }
-
-        mealList.innerHTML = html;
-    });
-        
+    getMealList(searchInputTxt);  
     
 }
 
 // get meal list that matches with the ingredients inputted within search
 function getMealList(){
-    let searchInputTxt = document.getElementById('search-input').value.trim();
+    let searchInputTxt = document.getElementById('search-input').value.trim() ;
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
     .then(response => response.json())
     .then(data => {
